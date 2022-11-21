@@ -1,9 +1,8 @@
 # TDIC-Deliveries
 
-A simple script that takes csv with deliveries and converts to individual delivery documents with map.
-
 ![CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)
-License: [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-nc-sa/4.0/).
+
+A simple script that takes a master delivery file and creates individual delivery documents with map and directions.
 
 ## Installation (macOS)
 ### Install Prerequisites
