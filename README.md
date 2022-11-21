@@ -37,13 +37,32 @@ pip3 install -r requirements.txt
 * Google Maps API key
 * TDIC.csv (placed in `TDIC-Deliveries/`)
 
+### TDIC.csv Prerequisites
+The TDIC.csv files is expected to have the following columns. All rows without a unique ID in column 0 will be ignored.
+0. ID
+1. Confirmation
+2. Last name
+3. First name
+4. Phone
+5. Address
+6. Apartment
+7. City
+8. State
+9. Zip 	
+10. Number of Meals	
+11. Previous # Meals (unused) 
+12. Notes 1	
+13. Notes 2
+14. Language	
+15. Any Comments?
+
 Inside the python virtual environment, run:
 ```sh
 python3 tdic.py API_KEY
 ```
-*** replace API_KEY with your API key
+> replace API_KEY with your API key
 
-To get master PDF:
+To get the master PDF:
 1. Navigate to `build/pdf/`
 2. Press `command+A`
 3. Right-click (two-finger click) and go to 'Quick Actions > Create PDF'
