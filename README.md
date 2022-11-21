@@ -1,6 +1,9 @@
 # TDIC-Deliveries
 
+A simple script that takes csv with deliveries and converts to individual delivery documents with map.
+
 ![CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)
+License: [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-nc-sa/4.0/).
 
 ## Installation (macOS)
 ### Install Prerequisites
@@ -32,13 +35,14 @@ Install all requirements at once using:
 pip3 install -r requirements.txt
 ``` 
 
-## Run
-### Run Prerequisites
+## Usage
+### Usage Prerequisites
 * Google Maps API key
 * TDIC.csv (placed in `TDIC-Deliveries/`)
 
 ### TDIC.csv Prerequisites
 The TDIC.csv files is expected to have the following columns. All rows without a unique ID in column 0 will be ignored.
+
 0. ID
 1. Confirmation
 2. Last name
@@ -55,6 +59,8 @@ The TDIC.csv files is expected to have the following columns. All rows without a
 13. Notes 2
 14. Language	
 15. Any Comments?
+
+### Run
 
 Inside the python virtual environment, run:
 ```sh
