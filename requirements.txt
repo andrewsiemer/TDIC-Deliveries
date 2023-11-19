@@ -1,3 +1,6 @@
 pypng
 pyqrcode
 reportlab
+requests
+Pillow
+PyPDF2
