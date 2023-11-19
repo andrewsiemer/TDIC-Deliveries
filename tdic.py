@@ -15,6 +15,7 @@ from io import BytesIO
 
 import pyqrcode
 import requests
+from natsort import natsorted
 from PIL import Image
 from PyPDF2 import PdfReader, PdfWriter
 from reportlab.lib.colors import gray
@@ -72,7 +73,7 @@ def combine_pdfs(input_dir, output_file):
     pdf_files = [file for file in os.listdir(input_dir) if file.endswith(".pdf")]
 
     # Sort the files to maintain the order
-    pdf_files.sort()
+    pdf_files = natsorted(pdf_files)
 
     for pdf_file in pdf_files:
         pdf_path = os.path.join(input_dir, pdf_file)

@@ -4,3 +4,4 @@ reportlab
 requests
 Pillow
 PyPDF2
+natsort
