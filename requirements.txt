@@ -5,3 +5,5 @@ requests
 Pillow
 PyPDF2
 natsort
+scikit-learn
+numpy

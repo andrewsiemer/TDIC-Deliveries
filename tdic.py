@@ -126,9 +126,6 @@ def main(args):
 
             index = int(data["index"])
 
-            if index < 451:
-                continue
-
             # Hash dict unique checksum
             checksum = hash_dict(data)
             print(f'{"Checksum:".ljust(COL_WIDTH)} {checksum}')
@@ -271,10 +268,11 @@ def main(args):
 
             # Numbered delivery steps with text wrapping
             instructions = [
-                f"1. Pick up {num_boxes} box{'es' if num_boxes > 1 else ''}.",
-                "2. Scan one of the QR codes below (Apple Maps or Google Maps) to get directions.",
+                f"1. Pick up {num_boxes} box{'es' if num_boxes > 1 else ''}{' and international events handout' if data.get('language') else ''}.",  # pylint: disable=line-too-long
+                "2. Scan one of the QR codes below to get directions.",
                 "3. Call the recipient to let them know you're on the way.",
-                "4. Deliver the box(es) to the recipient's address and wish them a Happy Thanksgiving from MRCC. If no one answers, leave on doorstep.",  # pylint: disable=line-too-long
+                f"4. Deliver the box(es) to the recipient's address and wish them a Happy Thanksgiving from {'MRCC' if index > 699 or index < 400 else 'Forest Park'}. If no one answers, leave on doorstep.",  # pylint: disable=line-too-long
+                "5. Delivery issues? Call Jason Davis 405-706-9563.",
             ]
 
             # Wrap and draw each instruction
